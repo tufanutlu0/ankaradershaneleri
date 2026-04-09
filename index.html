@@ -3,298 +3,1156 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Ankara Dershaneleri | Reklam ve Listeleme Platformu</title>
-
-<meta name="description" content="Ankara’daki dershaneleri keşfedin, karşılaştırın ve reklam verin. Sponsorlu listeleme sistemi ile öğrenciler sizi bulsun.">
-<meta name="keywords" content="ankara dershaneleri, dershane reklam, ankara kurslar, yks kurs ankara">
-
+<meta name="description" content="Ankara'nın en iyi dershaneleri ve kursları - İlçe bazlı LGS, YKS, Dil kursları rehberi. Çayyolu, Kızılay, Eryaman, Batıkent dershane fiyatları ve yorumları.">
+<meta name="keywords" content="ankara dershane, ankara kurs, lgs kursu ankara, yks kursu ankara, ankara özel ders, çayyolu dershane, kızılay kurs, eryaman dershane">
+<meta property="og:title" content="Ankara Dershaneleri - Ankara'nın En İyi Kurs ve Dershane Rehberi 2026">
+<meta property="og:description" content="Ankara'daki tüm dershaneleri karşılaştır, yorumları oku, en iyi kursu bul.">
+<title>Ankara Dershaneleri | Ankara'nın En İyi Kurs ve Dershane Rehberi 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy: { 900: '#0a0f2e', 800: '#0d1540', 700: '#111a52' },
+        gold: { 400: '#f5c842', 500: '#e8b820', 600: '#c99a10', 300: '#fde68a' },
+        cream: { 50: '#fefdf8', 100: '#fdf9ed' },
+        accent: { 500: '#e63946', 400: '#ff4d5a' }
+      },
+      fontFamily: {
+        display: ['Playfair Display', 'serif'],
+        body: ['DM Sans', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
 <style>
-:root{
-  --red:#e10600;
-  --dark:#111;
-  --gray:#666;
-  --light:#f6f6f6;
-}
+  * { box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; background: #fefdf8; }
+  .font-display { font-family: 'Playfair Display', serif; }
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif;}
+  /* Animated gradient hero */
+  .hero-bg {
+    background: linear-gradient(135deg, #0a0f2e 0%, #111a52 40%, #1a2570 70%, #0d1540 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg::before {
+    content: '';
+    position: absolute;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(245,200,66,0.15) 0%, transparent 70%);
+    top: -100px; right: -100px;
+    border-radius: 50%;
+    animation: pulse-glow 6s ease-in-out infinite;
+  }
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(230,57,70,0.1) 0%, transparent 70%);
+    bottom: -50px; left: 10%;
+    border-radius: 50%;
+    animation: pulse-glow 8s ease-in-out infinite reverse;
+  }
+  @keyframes pulse-glow {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.2); opacity: 1; }
+  }
+  .hero-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
 
-body{background:white;color:var(--dark);}
+  /* Gold shimmer */
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+  .gold-shimmer {
+    background: linear-gradient(90deg, #c99a10 0%, #f5c842 30%, #fde68a 50%, #f5c842 70%, #c99a10 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 4s linear infinite;
+  }
 
-/* HEADER */
-header{
-  position:sticky;
-  top:0;
-  background:white;
-  border-bottom:1px solid #eee;
-  z-index:1000;
-}
+  /* Premium card */
+  .premium-card {
+    background: linear-gradient(145deg, #ffffff 0%, #fefdf8 100%);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .premium-card::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(135deg, #f5c842, #e8b820, #c99a10, #f5c842);
+    border-radius: inherit;
+    z-index: -1;
+    background-size: 200% 200%;
+    animation: border-shimmer 3s ease infinite;
+  }
+  @keyframes border-shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .premium-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 60px rgba(245,200,66,0.2), 0 8px 20px rgba(0,0,0,0.12);
+  }
 
-.nav{
-  max-width:1200px;
-  margin:auto;
-  display:flex;
-  justify-content:space-between;
-  padding:15px 20px;
-  align-items:center;
-}
+  /* Standard card */
+  .standard-card {
+    background: #fff;
+    border: 1px solid #e8e8e0;
+    transition: all 0.3s ease;
+  }
+  .standard-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    border-color: #e8b820;
+  }
 
-.logo{
-  font-weight:900;
-  color:var(--red);
-}
+  /* Sticky header */
+  .sticky-header {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(10,15,46,0.92);
+    border-bottom: 1px solid rgba(245,200,66,0.15);
+    transition: all 0.3s ease;
+  }
+  .sticky-header.scrolled {
+    box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+  }
 
-/* BUTTON */
-.btn{
-  background:var(--red);
-  color:white;
-  border:none;
-  padding:10px 15px;
-  border-radius:8px;
-  cursor:pointer;
-  font-weight:700;
-}
+  /* Search bar */
+  .search-container {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+  }
+  .search-select {
+    background: transparent;
+    color: white;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+  }
+  .search-select option { background: #0a0f2e; color: white; }
 
-.btn:hover{opacity:.85}
+  /* Badge pulse */
+  @keyframes badge-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(245,200,66,0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(245,200,66,0); }
+  }
+  .badge-pulse { animation: badge-pulse 2s ease infinite; }
 
-/* HERO */
-.hero{
-  text-align:center;
-  padding:90px 20px;
-  background:linear-gradient(white,#fff2f2);
-}
+  /* Stars */
+  .star-filled { color: #f5c842; }
+  .star-empty { color: #ddd; }
 
-.hero h1{
-  font-size:44px;
-  font-weight:900;
-}
+  /* Step connector */
+  .step-connector {
+    position: absolute;
+    top: 28px;
+    left: calc(50% + 28px);
+    width: calc(100% - 56px);
+    height: 2px;
+    background: linear-gradient(90deg, #e8b820, #f5c842);
+    display: none;
+  }
+  @media (min-width: 768px) { .step-connector { display: block; } }
 
-.hero p{
-  color:var(--gray);
-  margin-top:10px;
-}
+  /* SEO section */
+  .seo-section {
+    background: linear-gradient(135deg, #f8f6ef 0%, #fefdf8 100%);
+    border-top: 3px solid #e8b820;
+  }
 
-/* STATS */
-.stats{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:20px;
-  max-width:1100px;
-  margin:40px auto;
-  padding:0 20px;
-}
+  /* CTA button */
+  .cta-primary {
+    background: linear-gradient(135deg, #f5c842 0%, #e8b820 100%);
+    color: #0a0f2e;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-primary::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+  }
+  .cta-primary:hover::before { left: 100%; }
+  .cta-primary:hover {
+    background: linear-gradient(135deg, #fde68a 0%, #f5c842 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(245,200,66,0.4);
+  }
 
-.stat{
-  border:1px solid #eee;
-  padding:20px;
-  text-align:center;
-  border-radius:12px;
-}
+  /* Mobile nav */
+  #mobile-menu {
+    background: rgba(10,15,46,0.98);
+    backdrop-filter: blur(20px);
+  }
 
-.stat h2{
-  color:var(--red);
-}
+  /* Filter active state */
+  .filter-btn.active {
+    background: #e8b820;
+    color: #0a0f2e;
+    border-color: #e8b820;
+  }
 
-/* SECTIONS */
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:40px 20px;
-}
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
 
-.title{
-  font-size:26px;
-  font-weight:800;
-  border-left:5px solid var(--red);
-  padding-left:10px;
-  margin-bottom:20px;
-}
+  /* Rating bar */
+  .rating-bar-fill {
+    height: 6px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, #f5c842, #e8b820);
+  }
 
-/* FEATURED */
-.featured{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:20px;
-}
+  /* Floating badge */
+  .float-badge {
+    animation: float 3s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
 
-.card{
-  border:2px solid #eee;
-  padding:20px;
-  border-radius:12px;
-  transition:.3s;
-  position:relative;
-}
+  /* Gradient text utility */
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #f5c842, #e8b820);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 
-.card:hover{
-  transform:translateY(-5px);
-  border-color:var(--red);
-}
+  /* Footer wave */
+  .footer-wave {
+    background: linear-gradient(135deg, #0a0f2e 0%, #0d1540 100%);
+  }
 
-.badge{
-  position:absolute;
-  top:10px;
-  right:10px;
-  background:var(--red);
-  color:white;
-  font-size:12px;
-  padding:5px 8px;
-  border-radius:6px;
-}
+  /* Tag chips */
+  .tag-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .tag-lgs { background: #dbeafe; color: #1d4ed8; }
+  .tag-yks { background: #dcfce7; color: #166534; }
+  .tag-dil { background: #fce7f3; color: #9d174d; }
+  .tag-fen { background: #ede9fe; color: #5b21b6; }
 
-/* PACKAGES */
-.packages{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
+  /* Mobile first adjustments */
+  @media (max-width: 640px) {
+    .hero-title { font-size: 2rem; }
+    .premium-grid { grid-template-columns: 1fr; }
+  }
 
-.package{
-  border:1px solid #eee;
-  padding:25px;
-  border-radius:12px;
-  text-align:center;
-}
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #f1f1f1; }
+  ::-webkit-scrollbar-thumb { background: #e8b820; border-radius: 3px; }
 
-.package:hover{
-  border-color:var(--red);
-  transform:scale(1.02);
-}
+  /* Number counter */
+  .stat-number {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+  }
 
-.price{
-  font-size:28px;
-  font-weight:900;
-  color:var(--red);
-  margin:10px 0;
-}
+  /* Input focus */
+  select:focus, input:focus { outline: none; }
 
-/* TESTIMONIALS */
-.testimonials{
-  background:var(--light);
-  padding:40px;
-  border-radius:12px;
-}
-
-/* CTA */
-.cta{
-  text-align:center;
-  padding:60px 20px;
-}
-
-.cta h2{
-  font-size:30px;
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:30px;
-  border-top:1px solid #eee;
-  color:var(--gray);
-}
+  /* Overlay card for map pin feel */
+  .map-dot {
+    width: 10px; height: 10px;
+    background: #e8b820;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+    box-shadow: 0 0 0 3px rgba(232,184,32,0.2);
+  }
 </style>
 </head>
+<body class="bg-cream-50">
 
-<body>
+<!-- ========== STICKY HEADER ========== -->
+<header class="sticky-header fixed top-0 left-0 right-0 z-50" id="main-header">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="flex items-center justify-between h-16 sm:h-18">
+      
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2 flex-shrink-0">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background: linear-gradient(135deg,#f5c842,#e8b820);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0a0f2e" stroke-width="2.5" stroke-linecap="round">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+          </svg>
+        </div>
+        <div>
+          <span class="text-white font-display font-bold text-base sm:text-lg leading-none">Ankara</span>
+          <span class="text-gradient-gold font-display font-bold text-base sm:text-lg leading-none ml-1">Dershaneleri</span>
+        </div>
+      </a>
 
-<header>
-  <div class="nav">
-    <div class="logo">ANKARA DERSHANELERİ</div>
-    <button class="btn" onclick="window.location.href='https://wa.me/905000000000'">
-      Reklam Ver
-    </button>
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="#ilceler" class="text-gray-300 hover:text-gold-400 text-sm font-medium transition-colors">İlçeler</a>
+        <a href="#lgs" class="text-gray-300 hover:text-gold-400 text-sm font-medium transition-colors">LGS Kursları</a>
+        <a href="#yks" class="text-gray-300 hover:text-gold-400 text-sm font-medium transition-colors">YKS Kursları</a>
+        <a href="#nasil-reklam" class="text-gray-300 hover:text-gold-400 text-sm font-medium transition-colors">Reklam Ver</a>
+      </nav>
+
+      <!-- CTA + Hamburger -->
+      <div class="flex items-center gap-3">
+        <a href="#nasil-reklam" class="hidden sm:inline-flex cta-primary items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          Kurumunu Ekle
+        </a>
+        <button id="menu-btn" class="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors">
+          <svg id="menu-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-white/10">
+    <div class="px-4 py-4 space-y-1">
+      <a href="#ilceler" class="block py-3 px-4 text-gray-200 hover:text-gold-400 hover:bg-white/5 rounded-lg text-sm font-medium transition-all" onclick="closeMobileMenu()">İlçeler</a>
+      <a href="#lgs" class="block py-3 px-4 text-gray-200 hover:text-gold-400 hover:bg-white/5 rounded-lg text-sm font-medium transition-all" onclick="closeMobileMenu()">LGS Kursları</a>
+      <a href="#yks" class="block py-3 px-4 text-gray-200 hover:text-gold-400 hover:bg-white/5 rounded-lg text-sm font-medium transition-all" onclick="closeMobileMenu()">YKS Kursları</a>
+      <a href="#nasil-reklam" class="block py-3 px-4 text-gray-200 hover:text-gold-400 hover:bg-white/5 rounded-lg text-sm font-medium transition-all" onclick="closeMobileMenu()">Reklam Ver</a>
+      <a href="#nasil-reklam" class="block mt-2 cta-primary text-center py-3 px-4 rounded-xl text-sm font-semibold" onclick="closeMobileMenu()">Kurumunu Ekle / Reklam Ver</a>
+    </div>
   </div>
 </header>
 
-<section class="hero">
-  <h1>Ankara Dershanelerini Keşfet</h1>
-  <p>Sponsorlu listeler ile öne çık, öğrenci kazan</p>
+<!-- ========== HERO SECTION ========== -->
+<section class="hero-bg pt-16 sm:pt-18 pb-20 sm:pb-28 relative" id="hero">
+  <div class="hero-pattern"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+    
+    <!-- Trust badge -->
+    <div class="flex justify-center mb-6 mt-10 sm:mt-14">
+      <div class="inline-flex items-center gap-2 bg-white/10 border border-gold-500/30 rounded-full px-4 py-2 float-badge">
+        <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+        <span class="text-gray-200 text-xs font-medium">Ankara'nın <strong class="text-gold-400">247</strong> Kurumu Bu Platformda</span>
+      </div>
+    </div>
+
+    <!-- Headline -->
+    <div class="text-center max-w-4xl mx-auto">
+      <h1 class="font-display text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight mb-2">
+        Ankara'nın En İyi
+      </h1>
+      <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight mb-6">
+        <span class="gold-shimmer">Dershaneleriyle</span>
+        <br class="sm:hidden">
+        <span class="text-white"> Geleceğe</span>
+      </h1>
+      <h1 class="font-display text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight mb-8">
+        Hazırlanın
+      </h1>
+      <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+        İlçenize göre filtreleyin, yorumları inceleyin, en iyi kursa <strong class="text-gold-400">ücretsiz</strong> danışın. LGS ve YKS'de fark yaratan kurumlarla tanışın.
+      </p>
+    </div>
+
+    <!-- Search Box -->
+    <div class="max-w-3xl mx-auto">
+      <div class="search-container rounded-2xl p-3 sm:p-4">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <!-- İlçe -->
+          <div class="relative">
+            <label class="block text-gold-400 text-xs font-semibold mb-1.5 px-1">📍 İlçe Seçin</label>
+            <div class="relative">
+              <select id="filter-ilce" class="search-select w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white text-sm focus:border-gold-400 focus:bg-white/15 transition-all" onchange="filterKurumlar()">
+                <option value="">Tüm İlçeler</option>
+                <option value="Çankaya">Çankaya / Kızılay</option>
+                <option value="Çayyolu">Çayyolu</option>
+                <option value="Eryaman">Eryaman</option>
+                <option value="Batıkent">Batıkent</option>
+                <option value="Keçiören">Keçiören</option>
+                <option value="Mamak">Mamak</option>
+                <option value="Etimesgut">Etimesgut</option>
+                <option value="Sincan">Sincan</option>
+                <option value="Yenimahalle">Yenimahalle</option>
+              </select>
+              <div class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f5c842" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kategori -->
+          <div class="relative">
+            <label class="block text-gold-400 text-xs font-semibold mb-1.5 px-1">🎯 Kategori</label>
+            <div class="relative">
+              <select id="filter-kategori" class="search-select w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white text-sm focus:border-gold-400 focus:bg-white/15 transition-all" onchange="filterKurumlar()">
+                <option value="">Tüm Kategoriler</option>
+                <option value="LGS">LGS Hazırlık</option>
+                <option value="YKS">YKS / TYT-AYT</option>
+                <option value="Dil">Yabancı Dil</option>
+                <option value="Fen">Fen & Matematik</option>
+                <option value="ALES">ALES / KPSS</option>
+              </select>
+              <div class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f5c842" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Search Button -->
+          <div>
+            <label class="block text-transparent text-xs font-semibold mb-1.5 px-1">.</label>
+            <button onclick="filterKurumlar()" class="cta-primary w-full py-3 rounded-xl text-sm font-bold flex items-center justify-center gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              Kurs Ara
+            </button>
+          </div>
+        </div>
+
+        <!-- Quick filters -->
+        <div class="mt-3 flex flex-wrap gap-2">
+          <span class="text-gray-400 text-xs font-medium self-center">Popüler:</span>
+          <button onclick="quickFilter('Çayyolu','LGS')" class="bg-white/10 hover:bg-gold-500/20 border border-white/15 text-gray-200 text-xs px-3 py-1.5 rounded-full transition-all hover:border-gold-400 hover:text-gold-400">Çayyolu LGS</button>
+          <button onclick="quickFilter('Çankaya','YKS')" class="bg-white/10 hover:bg-gold-500/20 border border-white/15 text-gray-200 text-xs px-3 py-1.5 rounded-full transition-all hover:border-gold-400 hover:text-gold-400">Kızılay YKS</button>
+          <button onclick="quickFilter('Eryaman','')" class="bg-white/10 hover:bg-gold-500/20 border border-white/15 text-gray-200 text-xs px-3 py-1.5 rounded-full transition-all hover:border-gold-400 hover:text-gold-400">Eryaman Kursları</button>
+          <button onclick="quickFilter('Batıkent','')" class="bg-white/10 hover:bg-gold-500/20 border border-white/15 text-gray-200 text-xs px-3 py-1.5 rounded-full transition-all hover:border-gold-400 hover:text-gold-400">Batıkent Kursları</button>
+          <button onclick="quickFilter('','Dil')" class="bg-white/10 hover:bg-gold-500/20 border border-white/15 text-gray-200 text-xs px-3 py-1.5 rounded-full transition-all hover:border-gold-400 hover:text-gold-400">Dil Kursları</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Row -->
+    <div class="grid grid-cols-3 gap-4 max-w-2xl mx-auto mt-12">
+      <div class="text-center">
+        <div class="stat-number text-3xl sm:text-4xl text-white">247</div>
+        <div class="text-gray-400 text-xs sm:text-sm mt-1">Kayıtlı Kurum</div>
+      </div>
+      <div class="text-center border-x border-white/10">
+        <div class="stat-number text-3xl sm:text-4xl text-white">18K+</div>
+        <div class="text-gray-400 text-xs sm:text-sm mt-1">Aylık Ziyaretçi</div>
+      </div>
+      <div class="text-center">
+        <div class="stat-number text-3xl sm:text-4xl text-white">4.8</div>
+        <div class="text-gray-400 text-xs sm:text-sm mt-1">Ortalama Puan</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom wave -->
+  <div class="absolute bottom-0 left-0 right-0">
+    <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width:100%;height:60px;display:block;">
+      <path d="M0,40 C360,0 1080,80 1440,20 L1440,60 L0,60 Z" fill="#fefdf8"/>
+    </svg>
+  </div>
 </section>
 
-<!-- STATS -->
-<section class="stats">
-  <div class="stat">
-    <h2>128+</h2>
-    <p>Dershane</p>
-  </div>
-  <div class="stat">
-    <h2>5.4K</h2>
-    <p>Aylık Ziyaretçi</p>
-  </div>
-  <div class="stat">
-    <h2>89</h2>
-    <p>Aktif Reklam</p>
-  </div>
-  <div class="stat">
-    <h2>24/7</h2>
-    <p>Görünürlük</p>
+<!-- ========== PREMIUM VİTRİN ========== -->
+<section class="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6" id="vitrin">
+  <div class="reveal">
+    <!-- Section header -->
+    <div class="flex items-center justify-between mb-8">
+      <div>
+        <div class="flex items-center gap-2 mb-2">
+          <div class="w-1 h-6 rounded-full" style="background: linear-gradient(#f5c842,#e8b820);"></div>
+          <span class="text-xs font-bold uppercase tracking-widest text-gold-600">⭐ Premium Üyeler</span>
+        </div>
+        <h2 class="font-display text-navy-900 text-2xl sm:text-3xl font-bold">Öne Çıkan Dershaneler</h2>
+        <p class="text-gray-500 text-sm mt-1">Platformumuzun en çok tercih edilen premium kurumları</p>
+      </div>
+      <a href="#nasil-reklam" class="hidden sm:flex items-center gap-1.5 text-gold-600 hover:text-gold-500 text-sm font-semibold transition-colors border border-gold-400 px-4 py-2 rounded-xl hover:bg-gold-50">
+        Öne Çık
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    </div>
+
+    <!-- Premium Cards Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" id="premium-grid">
+
+      <!-- Card 1 -->
+      <div class="premium-card rounded-2xl p-5 relative">
+        <div class="absolute -top-3 left-4 flex gap-1">
+          <span class="badge-pulse bg-gradient-to-r from-yellow-500 to-yellow-400 text-navy-900 text-xs font-bold px-3 py-1 rounded-full"># 1 Öne Çıkan</span>
+        </div>
+        <div class="mt-2">
+          <div class="flex items-start justify-between mb-3">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center font-display font-black text-lg text-white" style="background: linear-gradient(135deg,#0a0f2e,#111a52);">ÇK</div>
+            <div class="flex flex-col items-end">
+              <div class="flex gap-0.5">
+                <span class="star-filled text-sm">★</span><span class="star-filled text-sm">★</span><span class="star-filled text-sm">★</span><span class="star-filled text-sm">★</span><span class="star-filled text-sm">★</span>
+              </div>
+              <span class="text-gray-400 text-xs">4.9 (312 yorum)</span>
+            </div>
+          </div>
+          <h3 class="font-display font-bold text-navy-900 text-base mb-1">Çankaya Koleji Dershane</h3>
+          <div class="flex items-center gap-1 text-gray-500 text-xs mb-3">
+            <span class="map-dot"></span> Kızılay, Çankaya
+          </div>
+          <div class="flex flex-wrap gap-1 mb-4">
+            <span class="tag-chip tag-lgs">LGS</span>
+            <span class="tag-chip tag-yks">YKS</span>
+            <span class="tag-chip tag-fen">Fen</span>
+          </div>
+          <!-- Rating bars -->
+          <div class="space-y-1.5 mb-4">
+            <div class="flex items-center gap-2 text-xs text-gray-500">
+              <span class="w-16 shrink-0">Başarı</span>
+              <div class="flex-1 h-1.5 bg-gray-100 rounded-full"><div class="rating-bar-fill" style="width:96%"></div></div>
+              <span class="w-6 text-right">96%</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-gray-500">
+              <span class="w-16 shrink-0">Öğretmen</span>
+              <div class="flex-1 h-1.5 bg-gray-100 rounded-full"><div class="rating-bar-fill" style="width:98%"></div></div>
+              <span class="w-6 text-right">98%</span>
+            </div>
+          </div>
+          <a href="tel:+903121234567" class="cta-primary w-full block text-center py-2.5 rounded-xl text-xs font-bold">📞 Hemen Bilgi Al</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="premium-card rounded-2xl p-5 relative">
+        <div class="absolute -top-3 left-4">
+          <span class="badge-pulse bg-gradient-to-r from-yellow-500 to-yellow-400 text-navy-900 text-xs font-bold px-3 py-1 rounded-full"># 2 Öne Çıkan</span>
+        </div>
+        <div class="mt-2">
+          <div class="flex items-start justify-between mb-3">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center font-display font-black text-lg text-white" style="background: linear-gradient(135deg,#1e3a8a,#1d4ed8);">AE</div>
+            <div class="flex flex-col items-end">
+              <div class="flex gap-0.5">
+                <span class="star-filled text-sm">★</span><span class="star-filled text-sm">★</span><span class="star-filled text-sm">★</span><span class="star-filled text-sm">★</span><span class="star-filled text-sm">★</span>
+              </div>
+              <span class="text-gray-400 text-xs">4.8 (287 yorum)</span>
+            </div>
+          </div>
+          <h3 class="font-display font-bold text-navy-900 text-base mb-1">Akıl Eğitim Merkezi</h3>
+          <div class="flex items-center gap-1 text-gray-500 text-xs mb-3">
+            <span class="map-dot"></span> Çayyolu, Çankaya
+          </div>
+          <div class="flex flex-wrap gap-1 mb-4">
+            <span class="tag-chip tag-lgs">LGS</span>
+            <span class="tag-chip tag-yks">YKS</span>
+          </div>
+          <div class="space-y-1.5 mb-4">
+            <div class="flex items-center gap-2 text-xs text-gray-500">
+              <span class="w-16 shrink-0">Başarı</span>
+              <div class="flex-1 h-1.5 bg-gray-100 rounded-full"><div class="rating-bar-fill" style="width:94%"></div></div>
+              <span class="w-6 text-right">94%</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-gray-500">
+              <span class="w-16 shrink-0">Öğretmen</span>
+              <div class="flex-1 h-1.5 bg-gray-100 rounded-full"><div class="rating-bar-fill" style="width:97%"></div></div>
+              <span class="w-6 text-right">97%</span>
+            </div>
+          </div>
+          <a href="tel:+903121234568" class="cta-primary w-full block text-center py-2.5 rounded-xl text-xs font-bold">📞 Hemen Bilgi Al</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="premium-card rounded-2xl p-5 relative">
+        <div class="absolute -top-3 left-4">
+          <span class="badge-pulse bg-gradient-to-r from-yellow-500 to-yellow-400 text-navy-900 text-xs font-bold px-3 py-1 rounded-full"># 3 Öne Çıkan</span>
+        </div>
+        <div class="mt-2">
+          <div class="flex items-start justify-between mb-3">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center font-display font-black text-lg text-white" style="background: linear-gradient(135deg,#065f46,#059669);">EY</div>
+            <div class="flex flex-col items-end">
+              <div class="flex gap-0.5">
+                <span class="star-filled text-sm">★</span><span class="star-filled text-sm">★</span><span class="star-filled text-sm">★</span><span class="star-filled text-sm">★</span><span class="text-gray-300 text-sm">★</span>
+              </div>
+              <span class="text-gray-400 text-xs">4.7 (198 yorum)</span>
+            </div>
+          </div>
+          <h3 class="font-display font-bold text-navy-900 text-base mb-1">Eryaman Yıldız Kursları</h3>
+          <div class="flex items-center gap-1 text-gray-500 text-xs mb-3">
+            <span class="map-dot"></span> Eryaman, Etimesgut
+          </div>
+          <div class="flex flex-wrap gap-1 mb-4">
+            <span class="tag-chip tag-yks">YKS</span>
+            <span class="tag-chip tag-dil">Dil</span>
+          </div>
+          <div class="space-y-1.5 mb-4">
+            <div class="flex items-center gap-2 text-xs text-gray-500">
+              <span class="w-16 shrink-0">Başarı</span>
+              <div class="flex-1 h-1.5 bg-gray-100 rounded-full"><div class="rating-bar-fill" style="width:89%"></div></div>
+              <span class="w-6 text-right">89%</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-gray-500">
+              <span class="w-16 shrink-0">Öğretmen</span>
+              <div class="flex-1 h-1.5 bg-gray-100 rounded-full"><div class="rating-bar-fill" style="width:95%"></div></div>
+              <span class="w-6 text-right">95%</span>
+            </div>
+          </div>
+          <a href="tel:+903121234569" class="cta-primary w-full block text-center py-2.5 rounded-xl text-xs font-bold">📞 Hemen Bilgi Al</a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="premium-card rounded-2xl p-5 relative">
+        <div class="absolute -top-3 left-4">
+          <span class="badge-pulse bg-gradient-to-r from-yellow-500 to-yellow-400 text-navy-900 text-xs font-bold px-3 py-1 rounded-full"># 4 Öne Çıkan</span>
+        </div>
+        <div class="mt-2">
+          <div class="flex items-start justify-between mb-3">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center font-display font-black text-lg text-white" style="background: linear-gradient(135deg,#7c2d12,#c2410c);">BK</div>
+            <div class="flex flex-col items-end">
+              <div class="flex gap-0.5">
+                <span class="star-filled text-sm">★</span><span class="star-filled text-sm">★</span><span class="star-filled text-sm">★</span><span class="star-filled text-sm">★</span><span class="text-gray-300 text-sm">★</span>
+              </div>
+              <span class="text-gray-400 text-xs">4.7 (156 yorum)</span>
+            </div>
+          </div>
+          <h3 class="font-display font-bold text-navy-900 text-base mb-1">Batıkent Kariyer Kurs</h3>
+          <div class="flex items-center gap-1 text-gray-500 text-xs mb-3">
+            <span class="map-dot"></span> Batıkent, Yenimahalle
+          </div>
+          <div class="flex flex-wrap gap-1 mb-4">
+            <span class="tag-chip tag-lgs">LGS</span>
+            <span class="tag-chip tag-fen">Fen</span>
+          </div>
+          <div class="space-y-1.5 mb-4">
+            <div class="flex items-center gap-2 text-xs text-gray-500">
+              <span class="w-16 shrink-0">Başarı</span>
+              <div class="flex-1 h-1.5 bg-gray-100 rounded-full"><div class="rating-bar-fill" style="width:91%"></div></div>
+              <span class="w-6 text-right">91%</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-gray-500">
+              <span class="w-16 shrink-0">Öğretmen</span>
+              <div class="flex-1 h-1.5 bg-gray-100 rounded-full"><div class="rating-bar-fill" style="width:93%"></div></div>
+              <span class="w-6 text-right">93%</span>
+            </div>
+          </div>
+          <a href="tel:+903121234570" class="cta-primary w-full block text-center py-2.5 rounded-xl text-xs font-bold">📞 Hemen Bilgi Al</a>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
-<!-- FEATURED -->
-<section class="container">
-  <div class="title">Öne Çıkan Dershaneler</div>
+<!-- ========== STANDART LİSTELEME ========== -->
+<section class="py-12 sm:py-16 bg-gray-50 border-y border-gray-100" id="listele">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="reveal">
+      <!-- Header -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <div class="w-1 h-6 rounded-full bg-navy-900"></div>
+            <span class="text-xs font-bold uppercase tracking-widest text-navy-700">Tüm Kurumlar</span>
+          </div>
+          <h2 class="font-display text-navy-900 text-2xl sm:text-3xl font-bold">Ankara Dershane Listesi</h2>
+          <p class="text-gray-500 text-sm mt-1"><span id="result-count">243</span> kurum listeleniyor</p>
+        </div>
 
-  <div class="featured">
+        <!-- Sort -->
+        <div class="flex items-center gap-2">
+          <span class="text-gray-500 text-sm">Sırala:</span>
+          <select id="sort-select" class="border border-gray-200 rounded-xl px-3 py-2 text-sm text-gray-700 bg-white focus:border-gold-400 focus:outline-none" onchange="sortKurumlar()">
+            <option value="puan">En Yüksek Puan</option>
+            <option value="yorum">En Çok Yorum</option>
+            <option value="alfa">A-Z</option>
+          </select>
+        </div>
+      </div>
 
-    <div class="card">
-      <div class="badge">SPONSOR</div>
-      <h3>Başarı Eğitim Merkezi</h3>
-      <p>Kızılay | YKS hazırlık</p>
-    </div>
+      <!-- Filter chips -->
+      <div class="flex flex-wrap gap-2 mb-6" id="filter-chips">
+        <button class="filter-btn active border border-gray-200 bg-white text-gray-700 text-xs font-medium px-4 py-2 rounded-full transition-all hover:border-gold-400" data-kategori="" onclick="setKategoriFilter(this,'')">Tümü</button>
+        <button class="filter-btn border border-gray-200 bg-white text-gray-700 text-xs font-medium px-4 py-2 rounded-full transition-all hover:border-gold-400" data-kategori="LGS" onclick="setKategoriFilter(this,'LGS')">LGS Hazırlık</button>
+        <button class="filter-btn border border-gray-200 bg-white text-gray-700 text-xs font-medium px-4 py-2 rounded-full transition-all hover:border-gold-400" data-kategori="YKS" onclick="setKategoriFilter(this,'YKS')">YKS / TYT-AYT</button>
+        <button class="filter-btn border border-gray-200 bg-white text-gray-700 text-xs font-medium px-4 py-2 rounded-full transition-all hover:border-gold-400" data-kategori="Dil" onclick="setKategoriFilter(this,'Dil')">Yabancı Dil</button>
+        <button class="filter-btn border border-gray-200 bg-white text-gray-700 text-xs font-medium px-4 py-2 rounded-full transition-all hover:border-gold-400" data-kategori="Fen" onclick="setKategoriFilter(this,'Fen')">Fen & Matematik</button>
+      </div>
 
-    <div class="card">
-      <div class="badge">SPONSOR</div>
-      <h3>Final Kurs</h3>
-      <p>Bahçelievler | Türkiye geneli sistem</p>
-    </div>
+      <!-- Cards List -->
+      <div class="space-y-3" id="standard-list">
+      </div>
 
-    <div class="card">
-      <div class="badge">SPONSOR</div>
-      <h3>Ankara Akademi</h3>
-      <p>Çankaya | Birebir eğitim</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- PACKAGES -->
-<section class="container">
-  <div class="title">Reklam Paketleri</div>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Basic</h3>
-      <div class="price">999₺</div>
-      <p>Listeleme + görünürlük</p>
-    </div>
-
-    <div class="package">
-      <h3>Pro</h3>
-      <div class="price">2499₺</div>
-      <p>Öne çıkarma + SEO</p>
-    </div>
-
-    <div class="package">
-      <h3>Premium</h3>
-      <div class="price">4999₺</div>
-      <p>En üst sıra + reklam banner</p>
+      <!-- Load More -->
+      <div class="text-center mt-8">
+        <button onclick="loadMore()" id="load-more-btn" class="border-2 border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white font-semibold px-8 py-3 rounded-xl transition-all text-sm">
+          Daha Fazla Göster (243 kurumun tamamı)
+        </button>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta">
-  <h2>Dershanenizi Öne Çıkarın</h2>
-  <p>Öğrenciler sizi Google’da bulsun</p>
-  <br>
-  <button class="btn" onclick="window.location.href='https://wa.me/905000000000'">
-    Hemen Reklam Ver
-  </button>
+<!-- ========== NASIL REKLAM VERİRİM (B2B) ========== -->
+<section class="py-16 sm:py-24" id="nasil-reklam">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="reveal">
+      <!-- Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 bg-gold-50 border border-gold-200 rounded-full px-4 py-2 mb-4">
+          <span class="text-gold-600 text-xs font-bold uppercase tracking-widest">Reklam Ver & Büy</span>
+        </div>
+        <h2 class="font-display text-navy-900 text-3xl sm:text-4xl font-black mb-4">
+          <span class="text-gradient-gold">Binlerce Ankara Velisine</span> Ulaşın,<br>Kayıtlarınızı Artırın
+        </h2>
+        <p class="text-gray-500 text-base leading-relaxed">Her ay 18.000'den fazla veli ve öğrenci platformumuzu ziyaret ediyor. Dershanenizi öne çıkarın, doluluk oranınızı maksimuma taşıyın.</p>
+      </div>
+
+      <!-- 3 Steps -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14 relative">
+        
+        <!-- Step 1 -->
+        <div class="relative text-center">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl" style="background: linear-gradient(135deg,#f5c842,#e8b820);">📝</div>
+          <div class="absolute top-7 left-1/2 step-connector"></div>
+          <div class="inline-flex items-center gap-1 bg-navy-900 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Adım 1</div>
+          <h3 class="font-display font-bold text-navy-900 text-lg mb-2">Kurumunuzu Kaydedin</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Basit bir form doldurun. Kurum adı, iletişim, branşlar ve fotoğraflarınızı ekleyin. 5 dakikada profil hazır.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative text-center">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl" style="background: linear-gradient(135deg,#0a0f2e,#111a52);">🎯</div>
+          <div class="absolute top-7 left-1/2 step-connector"></div>
+          <div class="inline-flex items-center gap-1 bg-navy-900 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Adım 2</div>
+          <h3 class="font-display font-bold text-navy-900 text-lg mb-2">Paket Seçin</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Standart, Öne Çıkan veya Premium Vitrin paketlerinden birini seçin. Her bütçeye uygun seçenek var.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative text-center">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl" style="background: linear-gradient(135deg,#059669,#065f46);">🚀</div>
+          <div class="inline-flex items-center gap-1 bg-navy-900 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Adım 3</div>
+          <h3 class="font-display font-bold text-navy-900 text-lg mb-2">Velilere Ulaşın</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Profiliniz yayına girer, veliler sizi bulur, direkt arar. Hafta içinde kayıt artışını görürsünüz.</p>
+        </div>
+      </div>
+
+      <!-- Pricing Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10">
+
+        <!-- Standart -->
+        <div class="standard-card rounded-2xl p-6 text-center">
+          <div class="text-3xl mb-3">📋</div>
+          <h3 class="font-display font-bold text-navy-900 text-lg mb-1">Standart</h3>
+          <div class="text-3xl font-black text-navy-900 my-3">₺490<span class="text-base font-normal text-gray-400">/ay</span></div>
+          <ul class="text-sm text-gray-500 space-y-2 mb-5 text-left">
+            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Listede görünürlük</li>
+            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Profil sayfası</li>
+            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> İletişim bilgileri</li>
+            <li class="flex items-center gap-2"><span class="text-gray-300">✗</span> Vitrin reklamı</li>
+          </ul>
+          <a href="mailto:reklam@ankaradershaneleri.com" class="block border-2 border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white py-2.5 rounded-xl text-sm font-semibold transition-all">Başlat</a>
+        </div>
+
+        <!-- Premium - en popüler -->
+        <div class="rounded-2xl p-6 text-center relative overflow-hidden" style="background: linear-gradient(145deg,#0a0f2e,#111a52);">
+          <div class="absolute top-3 right-3 bg-gold-400 text-navy-900 text-xs font-bold px-3 py-1 rounded-full">EN POPÜLER</div>
+          <div class="text-3xl mb-3">⭐</div>
+          <h3 class="font-display font-bold text-white text-lg mb-1">Öne Çıkan</h3>
+          <div class="text-3xl font-black text-gold-400 my-3">₺1.290<span class="text-base font-normal text-gray-400">/ay</span></div>
+          <ul class="text-sm text-gray-300 space-y-2 mb-5 text-left">
+            <li class="flex items-center gap-2"><span class="text-gold-400">✓</span> Vitrin kartı (top 4)</li>
+            <li class="flex items-center gap-2"><span class="text-gold-400">✓</span> Gold çerçeve & rozet</li>
+            <li class="flex items-center gap-2"><span class="text-gold-400">✓</span> Arama önceliği</li>
+            <li class="flex items-center gap-2"><span class="text-gold-400">✓</span> Aylık istatistik raporu</li>
+          </ul>
+          <a href="mailto:reklam@ankaradershaneleri.com?subject=Öne Çıkan Paket" class="cta-primary block py-2.5 rounded-xl text-sm font-bold">Hemen Başla</a>
+        </div>
+
+        <!-- Kurumsal -->
+        <div class="standard-card rounded-2xl p-6 text-center">
+          <div class="text-3xl mb-3">🏆</div>
+          <h3 class="font-display font-bold text-navy-900 text-lg mb-1">Kurumsal</h3>
+          <div class="text-3xl font-black text-navy-900 my-3">₺2.990<span class="text-base font-normal text-gray-400">/ay</span></div>
+          <ul class="text-sm text-gray-500 space-y-2 mb-5 text-left">
+            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Hero banner reklamı</li>
+            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> #1 Vitrin pozisyonu</li>
+            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Özel içerik sayfası</li>
+            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> WhatsApp entegrasyonu</li>
+          </ul>
+          <a href="mailto:reklam@ankaradershaneleri.com?subject=Kurumsal Paket" class="block border-2 border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white py-2.5 rounded-xl text-sm font-semibold transition-all">İletişime Geç</a>
+        </div>
+      </div>
+
+      <!-- Trust Row -->
+      <div class="flex flex-wrap justify-center gap-6 sm:gap-10 py-8 border-t border-gray-100">
+        <div class="flex items-center gap-2 text-gray-500 text-sm"><span class="text-green-500 text-lg">✓</span> Sözleşmesiz, iptal garantili</div>
+        <div class="flex items-center gap-2 text-gray-500 text-sm"><span class="text-green-500 text-lg">✓</span> 7/24 destek hattı</div>
+        <div class="flex items-center gap-2 text-gray-500 text-sm"><span class="text-green-500 text-lg">✓</span> 72 saat yayın garantisi</div>
+        <div class="flex items-center gap-2 text-gray-500 text-sm"><span class="text-green-500 text-lg">✓</span> Aylık performans raporu</div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<footer>
-  © 2026 Ankara Dershaneleri | Reklam Platformu
+<!-- ========== İLÇELER ========== -->
+<section class="py-12 bg-navy-900" id="ilceler">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="reveal text-center mb-10">
+      <h2 class="font-display text-white text-2xl sm:text-3xl font-bold mb-2">İlçeye Göre Dershane Ara</h2>
+      <p class="text-gray-400 text-sm">Ankara'nın tüm ilçelerinde aktif kurumlar</p>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 reveal">
+      <button onclick="quickFilter('Çankaya','')" class="bg-white/5 hover:bg-gold-500/15 border border-white/10 hover:border-gold-400 rounded-xl p-4 text-center transition-all group">
+        <div class="text-2xl mb-2">🏛️</div>
+        <div class="text-white text-sm font-semibold group-hover:text-gold-400 transition-colors">Çankaya</div>
+        <div class="text-gray-500 text-xs mt-0.5">Kızılay · Çayyolu</div>
+        <div class="text-gold-400 text-xs mt-1 font-medium">67 kurum</div>
+      </button>
+      <button onclick="quickFilter('Eryaman','')" class="bg-white/5 hover:bg-gold-500/15 border border-white/10 hover:border-gold-400 rounded-xl p-4 text-center transition-all group">
+        <div class="text-2xl mb-2">🏘️</div>
+        <div class="text-white text-sm font-semibold group-hover:text-gold-400 transition-colors">Eryaman</div>
+        <div class="text-gray-500 text-xs mt-0.5">Etimesgut</div>
+        <div class="text-gold-400 text-xs mt-1 font-medium">38 kurum</div>
+      </button>
+      <button onclick="quickFilter('Batıkent','')" class="bg-white/5 hover:bg-gold-500/15 border border-white/10 hover:border-gold-400 rounded-xl p-4 text-center transition-all group">
+        <div class="text-2xl mb-2">🌆</div>
+        <div class="text-white text-sm font-semibold group-hover:text-gold-400 transition-colors">Batıkent</div>
+        <div class="text-gray-500 text-xs mt-0.5">Yenimahalle</div>
+        <div class="text-gold-400 text-xs mt-1 font-medium">29 kurum</div>
+      </button>
+      <button onclick="quickFilter('Keçiören','')" class="bg-white/5 hover:bg-gold-500/15 border border-white/10 hover:border-gold-400 rounded-xl p-4 text-center transition-all group">
+        <div class="text-2xl mb-2">🏫</div>
+        <div class="text-white text-sm font-semibold group-hover:text-gold-400 transition-colors">Keçiören</div>
+        <div class="text-gray-500 text-xs mt-0.5">Pursaklar</div>
+        <div class="text-gold-400 text-xs mt-1 font-medium">41 kurum</div>
+      </button>
+      <button onclick="quickFilter('Mamak','')" class="bg-white/5 hover:bg-gold-500/15 border border-white/10 hover:border-gold-400 rounded-xl p-4 text-center transition-all group">
+        <div class="text-2xl mb-2">🏙️</div>
+        <div class="text-white text-sm font-semibold group-hover:text-gold-400 transition-colors">Mamak</div>
+        <div class="text-gray-500 text-xs mt-0.5">Altındağ</div>
+        <div class="text-gold-400 text-xs mt-1 font-medium">32 kurum</div>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SEO CONTENT ========== -->
+<section class="seo-section py-16" id="seo-content">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <div class="reveal">
+      <h2 class="font-display text-navy-900 text-2xl sm:text-3xl font-bold mb-8 text-center">Ankara Dershane Rehberi 2026</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="font-display font-bold text-navy-900 text-lg mb-3">2026 Ankara Dershane Fiyatları</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">Ankara'da dershane ücretleri ilçe, sınıf seviyesi ve kurum kalitesine göre değişmektedir. 2026 yılı itibarıyla Çayyolu ve Kızılay bölgesindeki premium dershanelerde aylık ücretler 3.500 ₺ ile 8.000 ₺ arasında değişirken; Eryaman, Batıkent ve Keçiören gibi semtlerde daha uygun fiyatlı 1.800–4.500 ₺ aralığında seçenekler bulunmaktadır.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">YKS hazırlık programları genellikle yıllık paket halinde 20.000–45.000 ₺ aralığında sunulmaktadır. Erken kayıt indirimleri %15–25 arasında olabilmektedir.</p>
+        </div>
+        <div>
+          <h3 class="font-display font-bold text-navy-900 text-lg mb-3">En İyi YKS ve LGS Kursu Nasıl Seçilir?</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">Doğru dershaneyi seçmek, öğrencinin başarısını doğrudan etkiler. Dikkat edilmesi gereken kriterler; öğretmen kadrosu deneyimi, sınıf mevcudu (ideal: 12–18 kişi), deneme sınavı sıklığı, bireysel takip sistemi ve geçmiş yıl başarı oranlarıdır.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">Platformumuzdaki yorumları ve puanları inceleyerek, kurumla tanışma görüşmesi talep edebilir; ücretsiz deneme dersi imkânı olup olmadığını sorabilirsiniz.</p>
+        </div>
+        <div>
+          <h3 class="font-display font-bold text-navy-900 text-lg mb-3">Ankara'da En İyi LGS Hazırlık Kursları</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">8. sınıf öğrencileri için LGS'de fark yaratan dershaneler; matematik ve fen bilimleri branşlarında uzmanlaşmış kadrolara, haftalık deneme sınavlarına ve konu bazlı değerlendirme sistemlerine sahiptir. Çayyolu, Batıkent ve Eryaman'daki kurumların büyük çoğunluğu online takip paneli sunmaktadır.</p>
+        </div>
+        <div>
+          <h3 class="font-display font-bold text-navy-900 text-lg mb-3">Ankara Yabancı Dil Kursları 2026</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">İngilizce, Almanca ve Fransızca başta olmak üzere Ankara'da 80'den fazla dil kursu aktif olarak hizmet vermektedir. YDS, YÖKDİL ve Cambridge sınavlarına hazırlık programları için Kızılay ve Çayyolu bölgesi öne çıkmaktadır. Konuşma odaklı kurslar için küçük grup dersleri (4–8 kişi) tercih edilmesi tavsiye edilir.</p>
+        </div>
+      </div>
+
+      <!-- Internal link-like tags for SEO -->
+      <div class="mt-8 pt-6 border-t border-gray-200">
+        <p class="text-gray-400 text-xs font-medium uppercase tracking-widest mb-3">İlgili Aramalar</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-white border border-gray-200 text-gray-600 text-xs px-3 py-1.5 rounded-full hover:border-gold-400 hover:text-gold-600 cursor-pointer transition-all">ankara dershane ücretleri 2026</span>
+          <span class="bg-white border border-gray-200 text-gray-600 text-xs px-3 py-1.5 rounded-full hover:border-gold-400 hover:text-gold-600 cursor-pointer transition-all">çayyolu dershane</span>
+          <span class="bg-white border border-gray-200 text-gray-600 text-xs px-3 py-1.5 rounded-full hover:border-gold-400 hover:text-gold-600 cursor-pointer transition-all">eryaman lgs kursu</span>
+          <span class="bg-white border border-gray-200 text-gray-600 text-xs px-3 py-1.5 rounded-full hover:border-gold-400 hover:text-gold-600 cursor-pointer transition-all">batıkent yks dershane</span>
+          <span class="bg-white border border-gray-200 text-gray-600 text-xs px-3 py-1.5 rounded-full hover:border-gold-400 hover:text-gold-600 cursor-pointer transition-all">kızılay yabancı dil kursu</span>
+          <span class="bg-white border border-gray-200 text-gray-600 text-xs px-3 py-1.5 rounded-full hover:border-gold-400 hover:text-gold-600 cursor-pointer transition-all">keçiören dershane</span>
+          <span class="bg-white border border-gray-200 text-gray-600 text-xs px-3 py-1.5 rounded-full hover:border-gold-400 hover:text-gold-600 cursor-pointer transition-all">ankara özel ders</span>
+          <span class="bg-white border border-gray-200 text-gray-600 text-xs px-3 py-1.5 rounded-full hover:border-gold-400 hover:text-gold-600 cursor-pointer transition-all">ankara tyt ayt kursu</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer-wave text-gray-400">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+      
+      <!-- Brand -->
+      <div class="lg:col-span-1">
+        <a href="#" class="flex items-center gap-2 mb-4">
+          <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background: linear-gradient(135deg,#f5c842,#e8b820);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0a0f2e" stroke-width="2.5" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <span class="text-white font-display font-bold text-base">Ankara <span class="text-gold-400">Dershaneleri</span></span>
+        </a>
+        <p class="text-gray-500 text-sm leading-relaxed mb-4">Ankara'daki en iyi eğitim kurumlarını keşfedin. Veliler ve öğrenciler için ücretsiz, dershaneler için güçlü bir reklam platformu.</p>
+        <!-- Social -->
+        <div class="flex gap-3">
+          <a href="#" class="w-9 h-9 bg-white/5 hover:bg-gold-500/20 border border-white/10 hover:border-gold-400 rounded-lg flex items-center justify-center transition-all">
+            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="#" class="w-9 h-9 bg-white/5 hover:bg-gold-500/20 border border-white/10 hover:border-gold-400 rounded-lg flex items-center justify-center transition-all">
+            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" class="w-9 h-9 bg-white/5 hover:bg-gold-500/20 border border-white/10 hover:border-gold-400 rounded-lg flex items-center justify-center transition-all">
+            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.25 8.25 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Kurumlar -->
+      <div>
+        <h4 class="text-white font-semibold text-sm mb-4">Kurslar</h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#" class="hover:text-gold-400 transition-colors">LGS Hazırlık Kursları</a></li>
+          <li><a href="#" class="hover:text-gold-400 transition-colors">YKS / TYT-AYT Kursları</a></li>
+          <li><a href="#" class="hover:text-gold-400 transition-colors">Yabancı Dil Kursları</a></li>
+          <li><a href="#" class="hover:text-gold-400 transition-colors">Fen & Matematik Kursları</a></li>
+          <li><a href="#" class="hover:text-gold-400 transition-colors">ALES / KPSS Kursları</a></li>
+          <li><a href="#" class="hover:text-gold-400 transition-colors">Özel Ders İlanları</a></li>
+        </ul>
+      </div>
+
+      <!-- İlçeler -->
+      <div>
+        <h4 class="text-white font-semibold text-sm mb-4">İlçeler</h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#" class="hover:text-gold-400 transition-colors">Çankaya / Kızılay</a></li>
+          <li><a href="#" class="hover:text-gold-400 transition-colors">Çayyolu</a></li>
+          <li><a href="#" class="hover:text-gold-400 transition-colors">Eryaman</a></li>
+          <li><a href="#" class="hover:text-gold-400 transition-colors">Batıkent</a></li>
+          <li><a href="#" class="hover:text-gold-400 transition-colors">Keçiören</a></li>
+          <li><a href="#" class="hover:text-gold-400 transition-colors">Mamak</a></li>
+          <li><a href="#" class="hover:text-gold-400 transition-colors">Sincan</a></li>
+        </ul>
+      </div>
+
+      <!-- Kurumlar & İletişim -->
+      <div>
+        <h4 class="text-white font-semibold text-sm mb-4">Kurumlar İçin</h4>
+        <ul class="space-y-2.5 text-sm mb-5">
+          <li><a href="#nasil-reklam" class="hover:text-gold-400 transition-colors">Reklam Paketleri</a></li>
+          <li><a href="#" class="hover:text-gold-400 transition-colors">Kurumunuzu Ekleyin</a></li>
+          <li><a href="#" class="hover:text-gold-400 transition-colors">Başarı Hikayeleri</a></li>
+        </ul>
+        <h4 class="text-white font-semibold text-sm mb-3">İletişim</h4>
+        <div class="space-y-2 text-sm">
+          <a href="mailto:info@ankaradershaneleri.com" class="flex items-center gap-2 hover:text-gold-400 transition-colors">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            info@ankaradershaneleri.com
+          </a>
+          <a href="mailto:reklam@ankaradershaneleri.com" class="flex items-center gap-2 hover:text-gold-400 transition-colors">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            reklam@ankaradershaneleri.com
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-gray-600 text-xs">© 2026 AnkaraDershaneleri.com — Tüm hakları saklıdır.</p>
+      <div class="flex flex-wrap justify-center gap-4 text-xs">
+        <a href="#" class="hover:text-gold-400 transition-colors">KVKK Aydınlatma Metni</a>
+        <a href="#" class="hover:text-gold-400 transition-colors">Gizlilik Politikası</a>
+        <a href="#" class="hover:text-gold-400 transition-colors">Reklam Politikası</a>
+        <a href="#" class="hover:text-gold-400 transition-colors">Kullanım Koşulları</a>
+        <a href="#" class="hover:text-gold-400 transition-colors">Çerez Politikası</a>
+      </div>
+    </div>
+  </div>
 </footer>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script>
+// ---- DATA ----
+const kurumlar = [
+  { id:1, ad:"Açı Dershane", ilce:"Çankaya", semt:"Kızılay", kategoriler:["LGS","YKS"], puan:4.8, yorum:234, yil:2008 },
+  { id:2, ad:"Akademi Kurs Merkezi", ilce:"Çayyolu", semt:"Çayyolu", kategoriler:["YKS","Fen"], puan:4.7, yorum:189, yil:2012 },
+  { id:3, ad:"Başarı Eğitim", ilce:"Eryaman", semt:"Eryaman", kategoriler:["LGS","YKS"], puan:4.6, yorum:156, yil:2015 },
+  { id:4, ad:"Bilim Kurs", ilce:"Batıkent", semt:"Batıkent", kategoriler:["LGS","Fen"], puan:4.5, yorum:143, yil:2010 },
+  { id:5, ad:"Cambridge Dil Okulu", ilce:"Çankaya", semt:"Kızılay", kategoriler:["Dil"], puan:4.9, yorum:312, yil:2005 },
+  { id:6, ad:"Doğru Adım Kursları", ilce:"Keçiören", semt:"Keçiören", kategoriler:["LGS","YKS"], puan:4.4, yorum:98, yil:2018 },
+  { id:7, ad:"Elitpark Dershane", ilce:"Çayyolu", semt:"Çayyolu", kategoriler:["YKS"], puan:4.7, yorum:201, yil:2011 },
+  { id:8, ad:"Fener Eğitim Merkezi", ilce:"Eryaman", semt:"Eryaman", kategoriler:["LGS","Dil"], puan:4.3, yorum:87, yil:2019 },
+  { id:9, ad:"Gelecek Akademi", ilce:"Mamak", semt:"Mamak", kategoriler:["LGS","YKS","Fen"], puan:4.5, yorum:134, yil:2014 },
+  { id:10, ad:"Güven Kursları", ilce:"Sincan", semt:"Sincan", kategoriler:["YKS"], puan:4.2, yorum:76, yil:2016 },
+  { id:11, ad:"Hedef Dershane", ilce:"Çankaya", semt:"Çayyolu", kategoriler:["LGS","YKS"], puan:4.8, yorum:267, yil:2009 },
+  { id:12, ad:"İlke Eğitim", ilce:"Batıkent", semt:"Yenimahalle", kategoriler:["LGS"], puan:4.6, yorum:112, yil:2013 },
+  { id:13, ad:"Jüpiter Fen Kursu", ilce:"Çankaya", semt:"Kızılay", kategoriler:["Fen","YKS"], puan:4.7, yorum:178, yil:2007 },
+  { id:14, ad:"Kalem Kurs", ilce:"Keçiören", semt:"Keçiören", kategoriler:["LGS","Dil"], puan:4.3, yorum:92, yil:2017 },
+  { id:15, ad:"Lider Akademi", ilce:"Etimesgut", semt:"Etimesgut", kategoriler:["YKS","Fen"], puan:4.5, yorum:148, yil:2012 },
+];
+
+let activeKategori = '';
+let currentIlce = '';
+let currentKategori = '';
+let displayedCount = 8;
+
+function renderStars(puan) {
+  let stars = '';
+  for (let i = 1; i <= 5; i++) {
+    stars += `<span style="color:${i <= Math.round(puan) ? '#f5c842' : '#ddd'}; font-size:12px">★</span>`;
+  }
+  return stars;
+}
+
+function renderTagBadge(kat) {
+  const map = { LGS:'tag-lgs', YKS:'tag-yks', Dil:'tag-dil', Fen:'tag-fen' };
+  return `<span class="tag-chip ${map[kat]||''}">${kat}</span>`;
+}
+
+function getFiltered() {
+  let data = [...kurumlar];
+  const ilce = document.getElementById('filter-ilce').value || currentIlce;
+  const kat = document.getElementById('filter-kategori').value || activeKategori;
+  if (ilce) data = data.filter(k => k.ilce === ilce || k.semt === ilce);
+  if (kat) data = data.filter(k => k.kategoriler.includes(kat));
+  const sort = document.getElementById('sort-select').value;
+  if (sort === 'puan') data.sort((a,b) => b.puan - a.puan);
+  else if (sort === 'yorum') data.sort((a,b) => b.yorum - a.yorum);
+  else data.sort((a,b) => a.ad.localeCompare(b.ad, 'tr'));
+  return data;
+}
+
+function renderList() {
+  const data = getFiltered();
+  const container = document.getElementById('standard-list');
+  document.getElementById('result-count').textContent = data.length;
+  const slice = data.slice(0, displayedCount);
+  
+  container.innerHTML = slice.map(k => `
+    <div class="standard-card rounded-xl p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+      <div class="w-11 h-11 rounded-xl flex items-center justify-center font-display font-black text-sm text-white flex-shrink-0"
+           style="background: linear-gradient(135deg,#0a0f2e,#111a52);">
+        ${k.ad.substring(0,2).toUpperCase()}
+      </div>
+      <div class="flex-1 min-w-0">
+        <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-1">
+          <h3 class="font-semibold text-navy-900 text-sm">${k.ad}</h3>
+          <div class="flex gap-0.5">${renderStars(k.puan)}</div>
+          <span class="text-gray-400 text-xs">${k.puan} (${k.yorum} yorum)</span>
+        </div>
+        <div class="flex items-center gap-1 text-gray-500 text-xs mb-2">
+          <span class="map-dot"></span>${k.semt}, ${k.ilce} · ${new Date().getFullYear() - k.yil} yıldır hizmet
+        </div>
+        <div class="flex flex-wrap gap-1">${k.kategoriler.map(renderTagBadge).join('')}</div>
+      </div>
+      <div class="flex sm:flex-col gap-2 sm:gap-2 flex-shrink-0">
+        <a href="tel:+903120000000" class="cta-primary px-4 py-2 rounded-lg text-xs font-semibold whitespace-nowrap">Bilgi Al</a>
+        <a href="#" class="border border-gray-200 text-gray-600 hover:border-navy-900 hover:text-navy-900 px-4 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all">İncele</a>
+      </div>
+    </div>
+  `).join('');
+
+  const btn = document.getElementById('load-more-btn');
+  if (data.length <= displayedCount) {
+    btn.style.display = 'none';
+  } else {
+    btn.style.display = 'inline-block';
+    btn.textContent = `Daha Fazla Göster (${data.length - displayedCount} kurum daha)`;
+  }
+}
+
+function filterKurumlar() {
+  displayedCount = 8;
+  renderList();
+  document.getElementById('listele').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function sortKurumlar() {
+  displayedCount = 8;
+  renderList();
+}
+
+function quickFilter(ilce, kat) {
+  document.getElementById('filter-ilce').value = ilce;
+  document.getElementById('filter-kategori').value = kat;
+  currentIlce = ilce;
+  currentKategori = kat;
+  filterKurumlar();
+}
+
+function setKategoriFilter(btn, kat) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  activeKategori = kat;
+  displayedCount = 8;
+  renderList();
+}
+
+function loadMore() {
+  displayedCount += 8;
+  renderList();
+}
+
+// ---- Sticky Header ----
+window.addEventListener('scroll', () => {
+  const header = document.getElementById('main-header');
+  if (window.scrollY > 50) header.classList.add('scrolled');
+  else header.classList.remove('scrolled');
+});
+
+// ---- Mobile Menu ----
+document.getElementById('menu-btn').addEventListener('click', () => {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('hidden');
+});
+function closeMobileMenu() {
+  document.getElementById('mobile-menu').classList.add('hidden');
+}
+
+// ---- Scroll Reveal ----
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ---- Smooth scroll for anchors ----
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// ---- Init ----
+renderList();
+</script>
 
 </body>
 </html>
